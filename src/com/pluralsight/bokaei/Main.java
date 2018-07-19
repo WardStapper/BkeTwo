@@ -11,8 +11,7 @@ public class Main {
 
         System.out.println("Welkom bij het spel Boter-Kaas-Eieren!");
         BkeTwo spel = new BkeTwo();
-        //spel.printBord();
-        //spel.startBord();
+        // spel.startBord();
         System.out.println("X begint! Kies een positie die je wilt invullen! Eerst de rij, dan de kolom");
 
 

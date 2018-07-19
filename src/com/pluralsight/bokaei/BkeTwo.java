@@ -26,14 +26,11 @@ public class BkeTwo {
     private String speler;
     private int count = 0;
 
+    //Constructor zorgt voor eerste opzet van het bord
     public BkeTwo() {
         bord = new String[3][3];
         speler = "_X_|";
-        // kijken of ik mn spelicoontjes wat smoother kan maken, dit ziet er kut uit.
-        //startBord(); **Niet nodig denk ik, kan m vanuit main aanslingeren, not sure of ik m beter in mn constructor kan plaatsen**
-        // probably beter vanuit hier om tijdens creabea van mn object gewoon mn startbord neer te knallen
-
-
+        startBord();
     }
 
 
@@ -49,10 +46,8 @@ public class BkeTwo {
         for (int r = 0; r < 3; r++) {
             System.out.print("|");
             for (int k = 0; k < 3; k++) {
-                System.out.print(bord[r][k] = "___| ");
-                //bord[r][k] = "___|";
+                bord[r][k] = "___|";
             }
-            System.out.println();
 
         }
 
@@ -66,22 +61,67 @@ public class BkeTwo {
         for (int r = 0; r < 3; r++) {
             System.out.print("|");
             for (int k = 0; k < 3; k++) {
-                System.out.print(bord[r][k] = "___|");
+                System.out.print(bord[r][k]);
             }
             System.out.println();
 
         }
+
+        System.out.println("Huidig aantal zetten: " + count);
+        count++;
     }
 
  // Bekijkt rijen, kolommen, diagonalen voor een winst
 
-    public boolean spelEinde(int rMove, int kMove) {
+    public boolean spelWinst(   ) {
+        // per rij bekijken?
+
+
+        for ( int r = 0; r < 3 ; r++ ){
+            if (count < 9){
+                if (bord[r][0] && bord[r][1] && bord[r][2]!= "__|"  )
+
+        //per kolom bekijken?
+         for (int k = 0; k < 3; k++){
+              if (count < 9){
+                  if (bord[0][k] && bord [1][k] & bord [2][k] != "___|"}
+
+              }
+
+
+         }
+            }
+            else
+                System.out.println("Helaas, het is een gelijkspel geworden!");
+
+        }
+
+    {
+        return (((bord[0][0], bord[1][1], bord[2][2]) == true) || ((bord[0][2], bord[1][1], bord[2][0]) == true));
+    }
+        //kan ik hier vandaan misschien n string in de 'zelfdeSpeler' boolean gooien?
+
+        //if (rReeks == true)
 
         //ff n rijencheck en kolomcheck neerpleuron, should be fine. Stringvergelijken etc.
 
         return false;
 
 
+    }
+    //bedenken hoe ik die strings erin krijg, kijken of ik die return false terug kan brengen naar 1 zonder dat mn compiler gaat langemeijeren
+    public boolean zelfdeSpeler(String s1, String s2, String s3){
+
+        if (s1 != "_X_|"){
+            if (s1 != "_O_|"){
+                return ((s1 == s2)&&(s2 == s3));
+            }
+        }
+
+        else {
+            return false;
+        }
+        return false;
     }
 
     // Geeft aan welke markering neergezet moet worden
