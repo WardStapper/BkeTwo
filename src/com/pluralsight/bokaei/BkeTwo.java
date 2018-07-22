@@ -1,24 +1,13 @@
 package com.pluralsight.bokaei;
 
-/*1. Start Bord
-2, - Spelerzet
-   - is het n valide zet?
-   - plaats spelericoon op het bord
-   - bekijk of het spel over is (rij/kolom/diagonalen (probably met n boelejan en dan daarmee zorgen dattie n printje doet
-   - wissel van speler
-   - volgende zet
-   - bekijk status
-   - zorgen dat ik n count heb die tot 9 gaat, na 9 stopt het spel sowiso met n draw als aan voorafgaande voorwaarden niet voldaan is
-
-3. Speleinde (X win/ O wint / gelijkspel)
-*/
-
-
 import java.util.Scanner;
 
 public class BkeTwo {
 
+    //*********Ervoor zorgen dat wissepeler niet kan plaatsvinden als er een invalid zet wordt gedaan moet iets met spelerzet  doen. Dus als spelerzet == true -> spelerwissel
+
     //Classvariabelen neerzetten, private
+    //count neerzetten om ervoor te zorgen dat het spel na 9 zetten niet kan doorgaan. (gelijkspel e.d.)
 
     //public static int rij, kol;
     public static Scanner sc = new Scanner(System.in);
@@ -33,15 +22,10 @@ public class BkeTwo {
         startBord();
     }
 
+    //Zorgt voor de eerste weergave van het bord
+    //Zorgt ervoor dat er bij printBord een lege versie wordt uitgeprint
 
-    public static void main(String[] args) {
-
-
-    }
-    //Zorgt icm printBord voor de configuratie van het bord
-    // Hier moet ik probably wat aan schaven om die spelicoontjes soepel te krijgen
-
-    public void startBord() {
+    private void startBord() {
 
         for (int r = 0; r < 3; r++) {
             System.out.print("|");
@@ -68,61 +52,44 @@ public class BkeTwo {
         }
 
         System.out.println("Huidig aantal zetten: " + count);
-        count++;
+
     }
 
- // Bekijkt rijen, kolommen, diagonalen voor een winst
+//Bekijkt of drie van dezelfde in rijen en kolommen voorkomen
+    private boolean checkRijenKolom(String[][] bord) {
 
-    public boolean spelWinst(   ) {
-        // per rij bekijken?
-
-
-        for ( int r = 0; r < 3 ; r++ ){
-            if (count < 9){
-                if (bord[r][0] && bord[r][1] && bord[r][2]!= "__|"  )
-
-        //per kolom bekijken?
-         for (int k = 0; k < 3; k++){
-              if (count < 9){
-                  if (bord[0][k] && bord [1][k] & bord [2][k] != "___|"}
-
-              }
-
-
-         }
+        for (int r = 0; r < 3; r++) {
+            if (bord[r][0].equals(speler) && bord[r][1].equals(speler) && bord[r][2].equals(speler)) {
+                return true;
             }
-            else
-                System.out.println("Helaas, het is een gelijkspel geworden!");
-
-        }
-
-    {
-        return (((bord[0][0], bord[1][1], bord[2][2]) == true) || ((bord[0][2], bord[1][1], bord[2][0]) == true));
-    }
-        //kan ik hier vandaan misschien n string in de 'zelfdeSpeler' boolean gooien?
-
-        //if (rReeks == true)
-
-        //ff n rijencheck en kolomcheck neerpleuron, should be fine. Stringvergelijken etc.
-
-        return false;
-
-
-    }
-    //bedenken hoe ik die strings erin krijg, kijken of ik die return false terug kan brengen naar 1 zonder dat mn compiler gaat langemeijeren
-    public boolean zelfdeSpeler(String s1, String s2, String s3){
-
-        if (s1 != "_X_|"){
-            if (s1 != "_O_|"){
-                return ((s1 == s2)&&(s2 == s3));
+            if (bord[0][r].equals(speler) && bord[1][r].equals(speler) && bord[2][r].equals(speler)) {
+                return true;
             }
-        }
 
-        else {
-            return false;
         }
         return false;
     }
+
+    public boolean checkWinst(String speler) {
+
+        if (checkRijenKolom(bord)) {
+            System.out.println("Speler " + speler + "heeft gewonnen met 3 op een rij!");
+            return true;
+        }
+
+        //mogelijk omhoog schuiven?
+
+        else if ((bord[0][0].equals(speler)) && (bord[1][1].equals(speler)) && (bord[2][2].equals(speler))) {
+            System.out.println("Speler " + speler + "heeft gewonnen met 3 op een rij!");
+            return true;
+        } else if ((bord[2][0].equals(speler)) && (bord[1][1].equals(speler)) && (bord[0][2].equals(speler))) {
+            System.out.println("Speler " + speler + " heeft gewonnen met 3 op een rij!");
+            return true;
+        }
+
+        return false;
+    }
+
 
     // Geeft aan welke markering neergezet moet worden
 
@@ -133,31 +100,48 @@ public class BkeTwo {
     //Zorgt dat er een spelerwissel is per ronde
 
     public void spelerWissel() {
-        if (speler == "_X_|") {
+         if (speler == "_X_|") {
             speler = "_O_|";
         } else {
             speler = "_X_|";
         }
+        count++;
+        //System.out.println(count);
+
+
     }
 
     public boolean spelerZet(int rij, int kol) {
-        if ((rij >= 0) && (kol < 3)) {
+        if ((rij >= 0 && rij < 3) && (kol >= 0 && kol < 3)) {
             if (bord[rij][kol] == "___|") {
                 bord[rij][kol] = speler;
+                //spelerWissel();
                 return true;
-                }
+            }
+            return ongeldigeZet();
         }
+        return ongeldigeZet();
+
+    }
+
+    public static int valideerInput(String i) {
+        int result;
+        try {
+            result = Integer.parseInt(i);
+        } catch(Exception e){
+            return 10;
+        }
+        return result;
+    }
+
+    private boolean ongeldigeZet() {
+        System.out.println("Deze zet is niet valide, kies een andere zet!");
+        printBord();
         return false;
     }
 
-    public String zetControle(int spelerZet){
-
-        /////Zoiets
-        return "Jalekkermeijer";
-    }
-
-    public boolean testJoekoe(){
-        if (speler == "XXX"){
+    public boolean spelEinde() {
+        if (checkWinst(speler)) {
             return true;
         }
         return false;

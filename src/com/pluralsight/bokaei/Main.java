@@ -11,28 +11,36 @@ public class Main {
 
         System.out.println("Welkom bij het spel Boter-Kaas-Eieren!");
         BkeTwo spel = new BkeTwo();
-        // spel.startBord();
         System.out.println("X begint! Kies een positie die je wilt invullen! Eerst de rij, dan de kolom");
+        boolean gewonnen = false;
 
-
-        do {
+        while(!gewonnen) {
             System.out.println("Kies je volgende zet!");
             spel.printBord();
             int rij;
             int kol;
-            do {
-                System.out.println("Speler" + spel.getSpeler() + ", kies je volgende zet!");
-                rij = sc.nextInt() - 1;
-                kol = sc.nextInt() - 1;
+
+            while(!gewonnen) {
+                boolean gezet = false;
+                while(!gezet){
+                    System.out.println("Speler" + spel.getSpeler() + ", kies je volgende zet!");
+                    rij = spel.valideerInput(sc.next()) - 1;
+                    kol = spel.valideerInput(sc.next()) - 1;
+                    gezet = spel.spelerZet(rij,kol);
+                    //System.out.println(gewonnen);
+                    spel.printBord();
+                    gewonnen = spel.spelEinde();
+                    spel.spelerWissel();
+                }
             }
-            while (!spel.spelerZet(rij, kol));
-            spel.spelerWissel();
+           // while (!spel.spelerZet(rij, kol) && !gewonnen);
         }
-        while(!spel.testJoekoe());
 
-
+        //spel.printBord();
+        System.out.println("Het spel is afgelopen");
     }
-}
+
+  }
 
 
 
