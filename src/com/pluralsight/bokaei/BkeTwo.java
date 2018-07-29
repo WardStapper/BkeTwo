@@ -5,8 +5,7 @@ import java.util.Scanner;
 public class BkeTwo {
 
     //Classvariabelen neerzetten, private
-    //count neerzetten om ervoor te zorgen dat het spel na 9 zetten niet kan doorgaan. (gelijkspel e.d.)
-    //mogelijk met spelerzet == true -> spelerwissel
+        //mogelijk met spelerzet == true -> spelerwissel
 
     //public static int rij, kol;
     private static Scanner sc = new Scanner(System.in);
@@ -32,6 +31,7 @@ public class BkeTwo {
             }
                     }
         spelWelkom();
+        printBord();
 
     }
     //verwelkomt de speler
@@ -83,6 +83,7 @@ public class BkeTwo {
 
     private boolean checkWinst(String speler) {
 
+
         if (checkRijenKolom(bord)) {
             System.out.println("Speler " + speler + "heeft gewonnen met 3 op een rij!");
             return true;
@@ -97,8 +98,19 @@ public class BkeTwo {
             return true;
         }
 
+
+
         return false;
     }
+
+   /* public boolean gelijkSpel() {
+    if (count == 9) {
+            System.out.println("Helaas, het is een gelijkspel geworden!");
+            return true;
+        }
+        return false;
+    }
+*/
 
 
     // Geeft aan welke markering neergezet moet worden
@@ -148,38 +160,36 @@ public class BkeTwo {
         }
         return result;
     }
+    //stoppen van het spel
 
     public boolean opgeven(){
+
         System.out.println("Wil je opgeven? Ja / Nee ?");
         String stopspel = sc.nextLine();
         stopspel.toUpperCase();
-        if (stopspel == ("JA")){
+
+        if (stopspel.equals("JA")){
+
             return true;
+
         }
         return false;
 
 
     }
-   /*
-    public static String valideerOpgeven(int i){
-        String invoer;
-        try {
-            invoer =
-        }
-    }*/
-/*
-    public boolean ongeldigeZet() {
-        System.out.println("Deze zet is niet valide, kies een andere zet!");
-        return false;
-    }
 
-    */
 
     //checkt of er gewonnen is. Als dit het geval is zal dit als waarde true geven, hetgeen gewonnen op true zet. Hierdoor stopt de while loop, waardoor het spel ten einde loopt.
     public boolean spelEinde() {
-        if (checkWinst(speler)) {
+        if(count == 9 ){
+            System.out.println("Helaas, het is een gelijkspel geworden!");
             return true;
         }
+
+        else if (checkWinst(speler)) {
+            return true;
+        }
+
         return false;
     }
 }
