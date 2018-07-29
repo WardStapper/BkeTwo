@@ -4,10 +4,9 @@ import java.util.Scanner;
 
 public class BkeTwo {
 
-    //*********Ervoor zorgen dat wissepeler niet kan plaatsvinden als er een invalid zet wordt gedaan moet iets met spelerzet  doen. Dus als spelerzet == true -> spelerwissel
-
     //Classvariabelen neerzetten, private
     //count neerzetten om ervoor te zorgen dat het spel na 9 zetten niet kan doorgaan. (gelijkspel e.d.)
+    //mogelijk met spelerzet == true -> spelerwissel
 
     //public static int rij, kol;
     public static Scanner sc = new Scanner(System.in);
@@ -28,16 +27,34 @@ public class BkeTwo {
     private void startBord() {
 
         for (int r = 0; r < 3; r++) {
-            System.out.print("|");
-            for (int k = 0; k < 3; k++) {
+             for (int k = 0; k < 3; k++) {
                 bord[r][k] = "___|";
             }
-
-        }
-
+                    }
+        spelWelkom();
 
     }
+    //verwelkomt de speler
+    public void spelWelkom(){
 
+        System.out.println("Welkom spelers, voer nu ieder je naam in om te beginnen met spelen!");
+        System.out.println("Speler een, wat is je naam?: ");
+        String spelereen = sc.nextLine();
+        System.out.println("Welkom, " + spelereen + ", jij speelt nu icoontje X!" );
+        System.out.println("Speler twee, wat is je naam?:");
+        String spelertwee = sc.nextLine();
+        System.out.println("Welkom " + spelertwee + ", jij speelt nu icoontje O!");
+        System.out.println();
+
+
+        //Ik kan mogelijk de spelernaam in een string gooien, dan ervoor zorgen dat ik die steeds call met de spelerwissel -> getspeler?
+        //String spelernaam;
+
+
+        //System.out.println(spelereen + " begint met X! Kies een positie die je wilt invullen. Eerste de rij, dan de kolom");
+
+    }
+    //print de nieuwe bord met zet
 
     public void printBord() {
 
@@ -93,36 +110,41 @@ public class BkeTwo {
 
     // Geeft aan welke markering neergezet moet worden
 
-    public String getSpeler() {
-        return speler;
-    }
+    public String getSpeler() {return speler;}
+
+    //implementatie van gelijkspel
+    public int getCount() {return count;}
 
     //Zorgt dat er een spelerwissel is per ronde
 
     public void spelerWissel() {
-         if (speler == "_X_|") {
+        if (speler == "_X_|") {
             speler = "_O_|";
         } else {
             speler = "_X_|";
         }
+
         count++;
-        //System.out.println(count);
+
 
 
     }
-
+    //plaats het spelericoontje op het bord mits deze "___|" is.
     public boolean spelerZet(int rij, int kol) {
         if ((rij >= 0 && rij < 3) && (kol >= 0 && kol < 3)) {
             if (bord[rij][kol] == "___|") {
                 bord[rij][kol] = speler;
-                //spelerWissel();
+
                 return true;
             }
-            return ongeldigeZet();
+            System.out.println("Deze zet is niet valide, kies een andere zet!");
+            return false;
         }
-        return ongeldigeZet();
-
+        System.out.println("Deze zet is niet valide, kies een andere zet! TEST");
+        return false;
     }
+
+    //Opvangen van de error die je krijgt als je bijvoorbeeld 2x e invoert bij het invoeren van de rij en kolom. -> zal het gedrag van invalide zet forceren doordat er 10 returned.
 
     public static int valideerInput(String i) {
         int result;
@@ -134,12 +156,33 @@ public class BkeTwo {
         return result;
     }
 
-    private boolean ongeldigeZet() {
+    public boolean opgeven(){
+        System.out.println("Wil je opgeven? Ja / Nee ?");
+        String stopspel = sc.nextLine();
+        stopspel.toUpperCase();
+        if (stopspel == ("JA")){
+            return true;
+        }
+        return false;
+
+
+    }
+   /*
+    public static String valideerOpgeven(int i){
+        String invoer;
+        try {
+            invoer =
+        }
+    }*/
+/*
+    public boolean ongeldigeZet() {
         System.out.println("Deze zet is niet valide, kies een andere zet!");
-        printBord();
         return false;
     }
 
+    */
+
+    //checkt of er gewonnen is. Als dit het geval is zal dit als waarde true geven, hetgeen gewonnen op true zet. Hierdoor stopt de while loop, waardoor het spel ten einde loopt.
     public boolean spelEinde() {
         if (checkWinst(speler)) {
             return true;

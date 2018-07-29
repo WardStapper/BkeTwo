@@ -8,11 +8,10 @@ public class Main {
 
 
         Scanner sc = new Scanner(System.in);
-
-        System.out.println("Welkom bij het spel Boter-Kaas-Eieren!");
         BkeTwo spel = new BkeTwo();
-        System.out.println("X begint! Kies een positie die je wilt invullen! Eerst de rij, dan de kolom");
+       // System.out.println("X begint! Kies een positie die je wilt invullen! Eerst de rij, dan de kolom");
         boolean gewonnen = false;
+        boolean opgeven = false;
 
         while(!gewonnen) {
             System.out.println("Kies je volgende zet!");
@@ -27,18 +26,22 @@ public class Main {
                     rij = spel.valideerInput(sc.next()) - 1;
                     kol = spel.valideerInput(sc.next()) - 1;
                     gezet = spel.spelerZet(rij,kol);
-                    //System.out.println(gewonnen);
-                    spel.printBord();
+                    //opgeven = spel.opgeven();
                     gewonnen = spel.spelEinde();
-                    spel.spelerWissel();
+
                 }
+
+                spel.spelerWissel();
+                spel.printBord();
+
+
             }
-           // while (!spel.spelerZet(rij, kol) && !gewonnen);
+
         }
 
-        //spel.printBord();
         System.out.println("Het spel is afgelopen");
     }
+
 
   }
 
