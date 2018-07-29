@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="79d96484-8f59-4fb3-a01e-47091ddc7dc9" name="Default" comment="Changed file 2">
+    <list default="true" id="79d96484-8f59-4fb3-a01e-47091ddc7dc9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BkeTwo/com/pluralsight/bokaei/BkeTwo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BkeTwo/com/pluralsight/bokaei/BkeTwo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BkeTwo/com/pluralsight/bokaei/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BkeTwo/com/pluralsight/bokaei/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/pluralsight/bokaei/BkeTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pluralsight/bokaei/BkeTwo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/pluralsight/bokaei/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pluralsight/bokaei/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,7 +19,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/pluralsight/bokaei/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="196">
-              <caret line="15" column="40" lean-forward="true" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+              <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -30,8 +27,8 @@
       <file leaf-file-name="BkeTwo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/pluralsight/bokaei/BkeTwo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="49" column="136" selection-start-line="49" selection-start-column="136" selection-end-line="49" selection-end-column="136" />
+            <state relative-caret-position="365">
+              <caret line="167" lean-forward="true" selection-start-line="167" selection-end-line="167" />
             </state>
           </provider>
         </entry>
@@ -60,6 +57,7 @@
       <find>ongeldigezet</find>
       <find>speler</find>
       <find>kies</find>
+      <find>opgeven</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -159,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1532257086037</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Changed file 3">
+      <created>1532884563951</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1532884563951</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -168,13 +173,14 @@
     <layout>
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="bottom" id="TODO" order="10" />
+      <window_info anchor="bottom" id="Messages" order="3" weight="0.32943678" />
       <window_info anchor="right" id="Palette&#9;" order="1" />
       <window_info id="Image Layers" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="2" weight="0.11902232" />
-      <window_info anchor="bottom" id="Run" order="6" weight="0.32943678" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.32943678" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="0" />
@@ -191,7 +197,6 @@
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32943678" />
-      <window_info anchor="bottom" id="Messages" order="3" weight="0.32943678" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="4" />
@@ -228,7 +233,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changed file" />
     <MESSAGE value="Changed file 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed file 2" />
+    <MESSAGE value="Changed file 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed file 3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -426,15 +432,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/pluralsight/bokaei/BkeTwo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="49" column="136" selection-start-line="49" selection-start-column="136" selection-end-line="49" selection-end-column="136" />
+        <state relative-caret-position="365">
+          <caret line="167" lean-forward="true" selection-start-line="167" selection-end-line="167" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/pluralsight/bokaei/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
-          <caret line="15" column="40" lean-forward="true" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+          <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
         </state>
       </provider>
     </entry>
