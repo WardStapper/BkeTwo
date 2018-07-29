@@ -23,7 +23,6 @@ public class Main {
                     rij = spel.valideerInput(sc.next()) - 1;
                     kol = spel.valideerInput(sc.next()) - 1;
                    gezet = spel.spelerZet(rij,kol);
-
                    gewonnen = spel.spelEinde();
 
 
@@ -31,7 +30,9 @@ public class Main {
 
                 spel.spelerWissel();
                 gelijkspel = spel.spelEinde();
+
                 spel.printBord();
+                spel.opgeven();
               }
 
         System.out.println("Het spel is afgelopen");

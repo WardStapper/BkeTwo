@@ -99,21 +99,11 @@ public class BkeTwo {
         }
 
 
-
         return false;
     }
 
-   /* public boolean gelijkSpel() {
-    if (count == 9) {
-            System.out.println("Helaas, het is een gelijkspel geworden!");
-            return true;
-        }
-        return false;
-    }
-*/
 
-
-    // Geeft aan welke markering neergezet moet worden
+     //Geeft spelernaam aan het mainframe door
 
     public String getSpeler() {return speler;}
 
@@ -121,6 +111,7 @@ public class BkeTwo {
     public int getCount() {return count;}
 
     //Zorgt dat er een spelerwissel is per ronde
+    //Zorgt voor een count per spelerwissel.
 
     public void spelerWissel() {
         if (speler == "_X_|") {
@@ -160,16 +151,18 @@ public class BkeTwo {
         }
         return result;
     }
-    //stoppen van het spel
+    //vroegtijdig stoppen van het spel, verder kijken of deze op een elegantere manier een implementatie kan krijgen.
 
     public boolean opgeven(){
 
         System.out.println("Wil je opgeven? Ja / Nee ?");
         String stopspel = sc.nextLine();
-        stopspel.toUpperCase();
+        String upper = stopspel.toUpperCase();
 
-        if (stopspel.equals("JA")){
-
+        if (upper.equals("JA")){
+            System.out.println("Het spel is afgelopen, speler "  + speler + " heeft opgegeven binnen " + count + " zetten!" );
+            printBord();
+            System.exit(0);
             return true;
 
         }

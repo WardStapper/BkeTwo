@@ -21,8 +21,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/pluralsight/bokaei/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="24" column="51" lean-forward="true" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
+            <state relative-caret-position="549">
+              <caret line="46" lean-forward="true" selection-end-line="46" />
             </state>
           </provider>
         </entry>
@@ -30,8 +30,8 @@
       <file leaf-file-name="BkeTwo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/pluralsight/bokaei/BkeTwo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3043">
-              <caret line="179" selection-start-line="179" selection-end-line="179" />
+            <state relative-caret-position="498">
+              <caret line="190" lean-forward="true" selection-start-line="190" selection-end-line="190" />
             </state>
           </provider>
         </entry>
@@ -68,6 +68,7 @@
       <find>checkwinst</find>
       <find>gelijk</find>
       <find>getCount</find>
+      <find>getspeler</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -81,6 +82,7 @@
       <list>
         <option value="$PROJECT_DIR$/src/com/pluralsight/bokaei/Main.java" />
         <option value="$PROJECT_DIR$/src/com/pluralsight/bokaei/BkeTwo.java" />
+        <option value="$PROJECT_DIR$/src/com/pluralsight/bokaei/ScoreBoard.java" />
       </list>
     </option>
   </component>
@@ -95,7 +97,33 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="BkeTwo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BkeTwo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BkeTwo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BkeTwo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BkeTwo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BkeTwo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="bokaei" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="extract.method.default.visibility" value="private" />
@@ -195,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1532888270720</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Changed file 4">
+      <created>1532899322133</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1532899322133</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -210,12 +245,12 @@
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.32943678" />
+      <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.32943678" />
       <window_info anchor="bottom" id="Version Control" order="2" weight="0.11902232" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="0" />
-      <window_info content_ui="combo" id="Project" order="5" weight="0.083333336" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.083333336" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
       <window_info id="UI Designer" order="1" />
@@ -242,7 +277,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="15" />
+      <option name="time" value="17" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -451,17 +486,24 @@
     <entry file="file://$PROJECT_DIR$/out/production/BkeTwo/com/pluralsight/bokaei/BkeTwo.class">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/pluralsight/bokaei/ScoreBoard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="83" selection-start-line="5" selection-start-column="83" selection-end-line="5" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/pluralsight/bokaei/BkeTwo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3043">
-          <caret line="179" selection-start-line="179" selection-end-line="179" />
+        <state relative-caret-position="498">
+          <caret line="190" lean-forward="true" selection-start-line="190" selection-end-line="190" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/pluralsight/bokaei/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="24" column="51" lean-forward="true" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
+        <state relative-caret-position="549">
+          <caret line="46" lean-forward="true" selection-end-line="46" />
         </state>
       </provider>
     </entry>
