@@ -9,7 +9,7 @@ public class BkeTwo {
     //mogelijk met spelerzet == true -> spelerwissel
 
     //public static int rij, kol;
-    public static Scanner sc = new Scanner(System.in);
+    private static Scanner sc = new Scanner(System.in);
     private String[][] bord;
     private String speler;
     private int count = 0;
@@ -35,7 +35,7 @@ public class BkeTwo {
 
     }
     //verwelkomt de speler
-    public void spelWelkom(){
+    private void spelWelkom(){
 
         System.out.println("Welkom spelers, voer nu ieder je naam in om te beginnen met spelen!");
         System.out.println("Speler een, wat is je naam?: ");
@@ -71,24 +71,23 @@ public class BkeTwo {
 
         for (int r = 0; r < 3; r++) {
             if (bord[r][0].equals(speler) && bord[r][1].equals(speler) && bord[r][2].equals(speler)) {
-                return true;
+                 return true;
             }
             if (bord[0][r].equals(speler) && bord[1][r].equals(speler) && bord[2][r].equals(speler)) {
-                return true;
+                 return true;
             }
 
         }
         return false;
     }
 
-    public boolean checkWinst(String speler) {
+    private boolean checkWinst(String speler) {
 
         if (checkRijenKolom(bord)) {
             System.out.println("Speler " + speler + "heeft gewonnen met 3 op een rij!");
             return true;
         }
 
-        //mogelijk omhoog schuiven?
 
         else if ((bord[0][0].equals(speler)) && (bord[1][1].equals(speler)) && (bord[2][2].equals(speler))) {
             System.out.println("Speler " + speler + "heeft gewonnen met 3 op een rij!");
@@ -138,7 +137,7 @@ public class BkeTwo {
         return false;
     }
 
-    //Opvangen van de error die je krijgt als je bijvoorbeeld 2x e invoert bij het invoeren van de rij en kolom. -> zal het gedrag van invalide zet forceren doordat er 10 returned.
+    //Opvangen van de error die je krijgt als je bijvoorbeeld 2x e invoert bij het invoeren van de rij en kolom. Gedrag van een verkeerde zet forceren doordat er 10 returned.
 
     public static int valideerInput(String i) {
         int result;
