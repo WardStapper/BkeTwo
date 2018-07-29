@@ -45,13 +45,7 @@ public class BkeTwo {
         String spelertwee = sc.nextLine();
         System.out.println("Welkom " + spelertwee + ", jij speelt nu icoontje O!");
         System.out.println();
-
-
-        //Ik kan mogelijk de spelernaam in een string gooien, dan ervoor zorgen dat ik die steeds call met de spelerwissel -> getspeler?
-        //String spelernaam;
-
-
-        //System.out.println(spelereen + " begint met X! Kies een positie die je wilt invullen. Eerste de rij, dan de kolom");
+        System.out.println(spelereen + " begint met X! Kies een positie die je wilt invullen. Eerste de rij, dan de kolom");
 
     }
     //print de nieuwe bord met zet
@@ -140,7 +134,7 @@ public class BkeTwo {
             System.out.println("Deze zet is niet valide, kies een andere zet!");
             return false;
         }
-        System.out.println("Deze zet is niet valide, kies een andere zet! TEST");
+        System.out.println("Deze zet is niet valide, kies een andere zet!");
         return false;
     }
 
