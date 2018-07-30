@@ -6,6 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+        // Zorgt voor het gedrag van het spel
 
         Scanner sc = new Scanner(System.in);
         BkeTwo spel = new BkeTwo();

@@ -5,9 +5,7 @@ import java.util.Scanner;
 public class BkeTwo {
 
     //Classvariabelen neerzetten, private
-    //mogelijk met spelerzet == true -> spelerwissel
 
-    //public static int rij, kol;
     private static Scanner sc = new Scanner(System.in);
     private String[][] bord;
     private Speler speler;
@@ -16,12 +14,14 @@ public class BkeTwo {
     private Speler speler2;
 
     //Constructor zorgt voor eerste opzet van het bord
+
     public BkeTwo() {
         bord = new String[3][3];
         startBord();
     }
 
     //Zorgt voor de eerste weergave van het bord
+    //Verwelkomt de speler
     //Zorgt ervoor dat er bij printBord een lege versie wordt uitgeprint
 
     private void startBord() {
@@ -36,7 +36,8 @@ public class BkeTwo {
 
     }
 
-    //verwelkomt de speler
+    //Verwelkomt de speler
+    //Geeft aan dat er een optie is om vroegtijdig te stoppen
     private void spelWelkom() {
 
         System.out.println("Welkom spelers, voer nu ieder je naam in om te beginnen met spelen!");
@@ -54,7 +55,7 @@ public class BkeTwo {
         speler = speler1;
 
     }
-    //print de nieuwe bord met zet
+    //Nieuwe bordpritn met de nieuwe zet erop.
 
     public void printBord() {
 
@@ -87,6 +88,10 @@ public class BkeTwo {
         return false;
     }
 
+    //Bekijkt winst bij rijen en kolommen via checkRijenKolom
+    //Bekijkt winst bij diagonalen
+    //Geeft een true door als er sprake is van winst. Hetgeen ervoor zorgt dat in main checkWinst true geeft, wat gelijk is aan gewonnen. Hierdoor stopt de while loop en is het spel klaar.
+
     public boolean checkWinst() {
 
 
@@ -112,11 +117,6 @@ public class BkeTwo {
         return speler;
     }
 
-    //implementatie van gelijkspel
-    public int getCount() {
-        return count;
-    }
-
     //Zorgt dat er een spelerwissel is per ronde
     //Zorgt voor een count per spelerwissel.
 
@@ -128,7 +128,7 @@ public class BkeTwo {
 
     }
 
-    //plaats het spelericoontje op het bord mits deze "___|" is.
+    //Plaatst het spelericoontje op het bord mits deze "___|" is.
     public boolean spelerZet(int rij, int kol) {
         if ((rij >= 0 && rij < 3) && (kol >= 0 && kol < 3)) {
             if (bord[rij][kol] == "___|") {
@@ -143,6 +143,7 @@ public class BkeTwo {
         return false;
     }
 
+    //Faciliteren van het stoppen van het stop dmv 'stop'
     //Opvangen van de error die je krijgt als je bijvoorbeeld 2x e invoert bij het invoeren van de rij en kolom. Gedrag van een verkeerde zet forceren doordat er 10 returned.
 
     public int valideerInput(String i)  {
@@ -162,27 +163,10 @@ public class BkeTwo {
     }
     //vroegtijdig stoppen van het spel, verder kijken of deze op een elegantere manier een implementatie kan krijgen.
 
-    public boolean opgeven() {
-
-        System.out.println("Wil je opgeven? Ja / Nee ?");
-        String stopspel = sc.nextLine();
-        String upper = stopspel.toUpperCase();
-
-        if (upper.equals("JA")) {
-            System.out.println("Het spel is afgelopen, speler " + speler + " heeft opgegeven binnen " + count + " zetten!");
-            printBord();
-            System.exit(0);
-            return true;
-
-        }
-        return false;
-
-
-    }
 
     public boolean checkGelijkspel() {
         if (count == 9) {
-            System.out.println("Helaas, het is een gelijkspel geworden!");
+            System.out.println("Helaas, " + speler1.getNaam() +  " en " + speler2.getNaam() +  " , het is een gelijkspel geworden!");
             return true;
         }
         return false;
