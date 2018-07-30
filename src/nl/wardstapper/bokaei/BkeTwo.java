@@ -96,10 +96,10 @@ public class BkeTwo {
 
 
         if (checkRijenKolom(bord)) {
-            System.out.println("Speler " + speler.getNaam() + "heeft gewonnen met 3 op een rij!");
+            System.out.println("Speler " + speler.getNaam() + " heeft gewonnen met 3 op een rij!");
             return true;
         } else if ((bord[0][0].equals(speler.getSymbool())) && (bord[1][1].equals(speler.getSymbool())) && (bord[2][2].equals(speler.getSymbool()))) {
-            System.out.println("Speler " + speler.getNaam() + "heeft gewonnen met 3 op een rij!");
+            System.out.println("Speler " + speler.getNaam() + " heeft gewonnen met 3 op een rij!");
             return true;
         } else if ((bord[2][0].equals(speler.getSymbool())) && (bord[1][1].equals(speler.getSymbool())) && (bord[0][2].equals(speler.getSymbool()))) {
             System.out.println("Speler " + speler.getNaam() + " heeft gewonnen met 3 op een rij!");

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="BkeTwo:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/BkeTwo_jar</output-path>
+    <root id="archive" name="BkeTwo.jar">
+      <element id="module-output" name="BkeTwo" />
+    </root>
+  </artifact>
+</component>
