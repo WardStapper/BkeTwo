@@ -1,11 +1,11 @@
-package com.pluralsight.bokaei;
+package nl.wardstapper.bokaei;
 
 import java.util.Scanner;
 
 public class BkeTwo {
 
     //Classvariabelen neerzetten, private
-        //mogelijk met spelerzet == true -> spelerwissel
+    //mogelijk met spelerzet == true -> spelerwissel
 
     //public static int rij, kol;
     private static Scanner sc = new Scanner(System.in);
@@ -27,14 +27,15 @@ public class BkeTwo {
     private void startBord() {
 
         for (int r = 0; r < 3; r++) {
-             for (int k = 0; k < 3; k++) {
+            for (int k = 0; k < 3; k++) {
                 bord[r][k] = "___|";
             }
-                    }
+        }
         spelWelkom();
         printBord();
 
     }
+
     //verwelkomt de speler
     private void spelWelkom() {
 
@@ -45,13 +46,16 @@ public class BkeTwo {
         System.out.println("Welkom, " + spelereen + ", jij speelt nu icoontje X!");
         System.out.println("Speler twee, wat is je naam?:");
         String spelertwee = sc.nextLine();
-        this.speler2 = new Speler("_O_|" , spelereen);
+        this.speler2 = new Speler("_O_|" , spelertwee);
         System.out.println("Welkom " + spelertwee + ", jij speelt nu icoontje O!");
         System.out.println();
+        System.out.println("Om het spel vroegtijdig te stoppen, type stop in tijdens je beurt!");
         System.out.println(spelereen + " begint met X! Kies een positie die je wilt invullen. Eerste de rij, dan de kolom");
         speler = speler1;
 
     }
+    //print de nieuwe bord met zet
+
     public void printBord() {
 
 
@@ -68,20 +72,20 @@ public class BkeTwo {
 
     }
 
-//Bekijkt of drie van dezelfde in rijen en kolommen voorkomen
+    //Bekijkt of drie van dezelfde in rijen en kolommen voorkomen
     private boolean checkRijenKolom(String[][] bord) {
 
-    for (int r = 0; r < 3; r++) {
-        if (bord[r][0].equals(speler.getSymbool()) && bord[r][1].equals(speler.getSymbool()) && bord[r][2].equals(speler.getSymbool())) {
-            return true;
-        }
-        if (bord[0][r].equals(speler.getSymbool()) && bord[1][r].equals(speler.getSymbool()) && bord[2][r].equals(speler.getSymbool())) {
-            return true;
-        }
+        for (int r = 0; r < 3; r++) {
+            if (bord[r][0].equals(speler.getSymbool()) && bord[r][1].equals(speler.getSymbool()) && bord[r][2].equals(speler.getSymbool())) {
+                return true;
+            }
+            if (bord[0][r].equals(speler.getSymbool()) && bord[1][r].equals(speler.getSymbool()) && bord[2][r].equals(speler.getSymbool())) {
+                return true;
+            }
 
+        }
+        return false;
     }
-    return false;
-}
 
     public boolean checkWinst() {
 
@@ -104,10 +108,14 @@ public class BkeTwo {
 
     //Geeft spelernaam aan het mainframe door
 
-    public Speler getSpeler() {return speler;}
+    public Speler getSpeler() {
+        return speler;
+    }
 
     //implementatie van gelijkspel
-    public int getCount() {return count;}
+    public int getCount() {
+        return count;
+    }
 
     //Zorgt dat er een spelerwissel is per ronde
     //Zorgt voor een count per spelerwissel.
@@ -119,6 +127,7 @@ public class BkeTwo {
 
 
     }
+
     //plaats het spelericoontje op het bord mits deze "___|" is.
     public boolean spelerZet(int rij, int kol) {
         if ((rij >= 0 && rij < 3) && (kol >= 0 && kol < 3)) {
@@ -142,6 +151,7 @@ public class BkeTwo {
             System.out.println("Het spel is afgelopen, speler "  + speler.getNaam() + " heeft opgegeven binnen " + count + " zetten!" );
             System.exit(0);
         }
+
         int result;
         try {
             result = Integer.parseInt(i);
@@ -152,14 +162,14 @@ public class BkeTwo {
     }
     //vroegtijdig stoppen van het spel, verder kijken of deze op een elegantere manier een implementatie kan krijgen.
 
- /*   public boolean opgeven(){
+    public boolean opgeven() {
 
         System.out.println("Wil je opgeven? Ja / Nee ?");
         String stopspel = sc.nextLine();
         String upper = stopspel.toUpperCase();
 
-        if (upper.equals("JA")){
-            System.out.println("Het spel is afgelopen, speler "  + speler + " heeft opgegeven binnen " + count + " zetten!" );
+        if (upper.equals("JA")) {
+            System.out.println("Het spel is afgelopen, speler " + speler + " heeft opgegeven binnen " + count + " zetten!");
             printBord();
             System.exit(0);
             return true;
@@ -168,28 +178,16 @@ public class BkeTwo {
         return false;
 
 
-    }*/
+    }
 
-    public boolean gelijkSpel(){
-        if(count == 9 ){
+    public boolean checkGelijkspel() {
+        if (count == 9) {
             System.out.println("Helaas, het is een gelijkspel geworden!");
             return true;
         }
         return false;
     }
-
-    //checkt of er gewonnen is. Als dit het geval is zal dit als waarde true geven, hetgeen gewonnen op true zet. Hierdoor stopt de while loop, waardoor het spel ten einde loopt.
-    /*public boolean spelEinde() {
-
-
-        if (checkWinst(speler)) {
-            return true;
-        }
-
-        return false;
-    }*/
 }
-
 
 
 
