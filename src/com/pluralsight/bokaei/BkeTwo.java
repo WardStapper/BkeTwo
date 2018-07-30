@@ -12,6 +12,8 @@ public class BkeTwo {
     private String[][] bord;
     private String speler;
     private int count = 0;
+    private Speler speler1;
+    private Speler speler2;
 
     //Constructor zorgt voor eerste opzet van het bord
     public BkeTwo() {
@@ -35,21 +37,22 @@ public class BkeTwo {
 
     }
     //verwelkomt de speler
-    private void spelWelkom(){
+    private void spelWelkom() {
 
         System.out.println("Welkom spelers, voer nu ieder je naam in om te beginnen met spelen!");
         System.out.println("Speler een, wat is je naam?: ");
         String spelereen = sc.nextLine();
-        System.out.println("Welkom, " + spelereen + ", jij speelt nu icoontje X!" );
+        this.speler1 = new Speler("_X_|" , spelereen);
+        System.out.println("Welkom, " + spelereen + ", jij speelt nu icoontje X!");
         System.out.println("Speler twee, wat is je naam?:");
         String spelertwee = sc.nextLine();
+        this.speler2 = new Speler("_O_|" , spelereen);
         System.out.println("Welkom " + spelertwee + ", jij speelt nu icoontje O!");
         System.out.println();
         System.out.println(spelereen + " begint met X! Kies een positie die je wilt invullen. Eerste de rij, dan de kolom");
+        speler = speler1;
 
     }
-    //print de nieuwe bord met zet
-
     public void printBord() {
 
 
@@ -81,7 +84,7 @@ public class BkeTwo {
         return false;
     }
 
-    private boolean checkWinst(String speler) {
+    public boolean checkWinst() {
 
 
         if (checkRijenKolom(bord)) {
@@ -142,7 +145,14 @@ public class BkeTwo {
 
     //Opvangen van de error die je krijgt als je bijvoorbeeld 2x e invoert bij het invoeren van de rij en kolom. Gedrag van een verkeerde zet forceren doordat er 10 returned.
 
-    public static int valideerInput(String i) {
+    public   int valideerInput(String i)  {
+
+        String spelstop = i.toLowerCase();
+        if (spelstop.equals( "stop")){
+            System.out.println("Het spel is afgelopen, speler "  + speler + " heeft opgegeven binnen " + count + " zetten!" );
+            System.exit(0);
+        }
+
         int result;
         try {
             result = Integer.parseInt(i);
@@ -153,7 +163,7 @@ public class BkeTwo {
     }
     //vroegtijdig stoppen van het spel, verder kijken of deze op een elegantere manier een implementatie kan krijgen.
 
-    public boolean opgeven(){
+ /*   public boolean opgeven(){
 
         System.out.println("Wil je opgeven? Ja / Nee ?");
         String stopspel = sc.nextLine();
@@ -169,22 +179,26 @@ public class BkeTwo {
         return false;
 
 
-    }
+    }*/
 
-
-    //checkt of er gewonnen is. Als dit het geval is zal dit als waarde true geven, hetgeen gewonnen op true zet. Hierdoor stopt de while loop, waardoor het spel ten einde loopt.
-    public boolean spelEinde() {
+    public boolean gelijkSpel(){
         if(count == 9 ){
             System.out.println("Helaas, het is een gelijkspel geworden!");
             return true;
         }
+        return false;
+    }
 
-        else if (checkWinst(speler)) {
+    //checkt of er gewonnen is. Als dit het geval is zal dit als waarde true geven, hetgeen gewonnen op true zet. Hierdoor stopt de while loop, waardoor het spel ten einde loopt.
+    /*public boolean spelEinde() {
+
+
+        if (checkWinst(speler)) {
             return true;
         }
 
         return false;
-    }
+    }*/
 }
 
 

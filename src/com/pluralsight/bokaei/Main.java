@@ -23,16 +23,17 @@ public class Main {
                     rij = spel.valideerInput(sc.next()) - 1;
                     kol = spel.valideerInput(sc.next()) - 1;
                    gezet = spel.spelerZet(rij,kol);
-                   gewonnen = spel.spelEinde();
+                   gewonnen = spel.checkWinst();
 
 
                 }
 
                 spel.spelerWissel();
-                gelijkspel = spel.spelEinde();
+                gelijkspel = spel.gelijkSpel();
 
+
+               // spel.opgeven();
                 spel.printBord();
-                spel.opgeven();
               }
 
         System.out.println("Het spel is afgelopen");
