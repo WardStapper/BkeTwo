@@ -10,7 +10,7 @@ public class BkeTwo {
     //public static int rij, kol;
     private static Scanner sc = new Scanner(System.in);
     private String[][] bord;
-    private String speler;
+    private Speler speler;
     private int count = 0;
     private Speler speler1;
     private Speler speler2;
