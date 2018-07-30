@@ -111,7 +111,7 @@ public class BkeTwo {
     }
 
 
-    //Geeft spelernaam aan het mainframe door
+    //Geeft spelernaam aan het mainframe door, omdat speler hier private is.
 
     public Speler getSpeler() {
         return speler;

@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79d96484-8f59-4fb3-a01e-47091ddc7dc9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/nl/wardstapper/bokaei/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BkeTwo/com/pluralsight/bokaei/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BkeTwo/com/pluralsight/bokaei/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/pluralsight/bokaei/BkeTwo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/pluralsight/bokaei/BkeTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nl/wardstapper/bokaei/BkeTwo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/pluralsight/bokaei/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/pluralsight/bokaei/Speler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/pluralsight/bokaei/Speler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nl/wardstapper/bokaei/Speler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BkeTwo/com/pluralsight/bokaei/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nl/wardstapper/bokaei/BkeTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nl/wardstapper/bokaei/BkeTwo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nl/wardstapper/bokaei/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nl/wardstapper/bokaei/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,20 +16,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/nl/wardstapper/bokaei/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="32" lean-forward="true" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+            <state relative-caret-position="153">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BkeTwo.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BkeTwo.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/nl/wardstapper/bokaei/BkeTwo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="48" column="49" selection-start-line="48" selection-start-column="49" selection-end-line="48" selection-end-column="49" />
+            <state relative-caret-position="522">
+              <caret line="111" column="5" lean-forward="true" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -92,6 +87,7 @@
       <find>kies</find>
       <find>getspeler</find>
       <find>this.</find>
+      <find>bord</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -109,6 +105,7 @@
         <option value="$PROJECT_DIR$/src/com/pluralsight/bokaei/Main.java" />
         <option value="$PROJECT_DIR$/src/nl/wardstapper/bokaei/bokaei/Main.java" />
         <option value="$PROJECT_DIR$/src/nl/wardstapper/bokaei/Main.java" />
+        <option value="$PROJECT_DIR$/src/nl/wardstapper/bokaei/BkeTwo.java" />
       </list>
     </option>
   </component>
@@ -148,6 +145,12 @@
   <component name="PropertiesComponent">
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="nl.wardstapper" />
+      <recent name="nl.wardstapper.bokaei" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -278,7 +281,14 @@
       <option name="project" value="LOCAL" />
       <updated>1532938559762</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Changed file 4">
+      <created>1532940188542</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1532940188542</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -294,11 +304,11 @@
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="2" weight="0.11902232" />
-      <window_info anchor="bottom" id="Run" order="6" weight="0.32943678" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.32943678" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="0" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.083333336" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.083333336" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
       <window_info id="UI Designer" order="1" />
@@ -629,17 +639,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/nl/wardstapper/bokaei/BkeTwo.java">
+    <entry file="file://$PROJECT_DIR$/src/nl/wardstapper/bokaei/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="48" column="49" selection-start-line="48" selection-start-column="49" selection-end-line="48" selection-end-column="49" />
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/nl/wardstapper/bokaei/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/nl/wardstapper/bokaei/BkeTwo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="32" lean-forward="true" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+        <state relative-caret-position="522">
+          <caret line="111" column="5" lean-forward="true" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
         </state>
       </provider>
     </entry>
